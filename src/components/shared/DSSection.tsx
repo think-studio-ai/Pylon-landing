@@ -66,7 +66,7 @@ export default function DSSection() {
               <div
                 onClick={() => {
                   window.open(
-                    "https://dsplusme.com/",
+                    "https://digitalstudioeg.com/",
                     "_blank",
                     "noopener,noreferrer",
                   );

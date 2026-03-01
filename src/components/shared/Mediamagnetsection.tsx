@@ -57,7 +57,16 @@ export default function MediaMagnetSection() {
             </div>
 
             {/* Button */}
-            <div className="mt-4 sm:mt-5">
+            <div
+              onClick={() => {
+                window.open(
+                  "http://mediamagneteg.com/",
+                  "_blank",
+                  "noopener,noreferrer",
+                );
+              }}
+              className="mt-4 sm:mt-5"
+            >
               <button className="service-button px-6 sm:px-7 md:px-8 py-3 sm:py-3.5 md:py-4 rounded-full bg-[#D2D4D1]/90 text-black text-[10px] sm:text-[11px] md:text-[13px] font-medium tracking-wider uppercase transition-all duration-300 hover:bg-black hover:text-white shadow-[0_4px_8px_rgba(0,0,0,0.15)]">
                 GO TO WEBSITE
               </button>

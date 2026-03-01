@@ -49,7 +49,11 @@ export default function TactSection() {
               {/* Button */}
               <div
                 onClick={() => {
-                  window.open("", "_blank", "noopener,noreferrer");
+                  window.open(
+                    "https://tactinnovations.com/",
+                    "_blank",
+                    "noopener,noreferrer",
+                  );
                 }}
                 className="mt-8"
               >

@@ -7,21 +7,21 @@ import MediaMagnetSection from "../../components/shared/Mediamagnetsection";
 
 export default function Services() {
   const services = [
-    { label: "MEDIA PRODUCTIONS", url: "https://lucide.dev/icons/move-up" },
-    { label: "PUBLIC POLICY", url: "tact" },
-    { label: "AI SOLUTIONS", url: "https://thinkstudio.ai/" },
-    { label: "E-COMMERCE & TRADE", url: "ds" },
-    { label: "PR & MARKETING", url: "media" },
-    { label: "STRATEGIC FORSIGHT", url: "insightify" },
-    { label: "WEBSITE, APPS & AI", url: "https://thinkstudio.ai/" },
-    { label: "ADVERTISING CAMPAIGNS", url: "media" },
-    { label: "BRANDING STRATEGIES", url: "ds" },
-    { label: "SPACE DESIGN", url: "tact" },
-    { label: "CONTENT CREATION", url: "media" },
-    { label: "SOCIAL MEDIA", url: "media" },
-    { label: "MEDIA BUYING", url: "media" },
-    { label: "DOCUMENTARY PRODUCTION", url: "media" },
-    { label: "SCRIPT WRITING", url: "media" },
+    { label: "MEDIA PRODUCTIONS", url: "" },
+    { label: "PUBLIC POLICY", url: "" },
+    { label: "AI SOLUTIONS", url: "" },
+    { label: "E-COMMERCE & TRADE", url: "" },
+    { label: "PR & MARKETING", url: "" },
+    { label: "STRATEGIC FORSIGHT", url: "" },
+    { label: "WEBSITE, APPS & AI", url: "" },
+    { label: "ADVERTISING CAMPAIGNS", url: "" },
+    { label: "BRANDING STRATEGIES", url: "" },
+    { label: "SPACE DESIGN", url: "" },
+    { label: "CONTENT CREATION", url: "" },
+    { label: "SOCIAL MEDIA", url: "" },
+    { label: "MEDIA BUYING", url: "" },
+    { label: "DOCUMENTARY PRODUCTION", url: "" },
+    { label: "SCRIPT WRITING", url: "" },
   ];
 
   return (
@@ -42,9 +42,9 @@ export default function Services() {
             <div className="flex flex-wrap justify-center items-center gap-2.5 sm:gap-3 md:gap-4 w-full max-w-[1200px] mx-auto px-2 sm:px-4 mb-12 sm:mb-16">
               {services.map((service, index) => (
                 <button
-                  onClick={() => {
-                    window.open(service.url, "_blank", "noopener,noreferrer");
-                  }}
+                  // onClick={() => {
+                  //   window.open(service.url, "_blank", "noopener,noreferrer");
+                  // }}
                   key={index}
                   className="service-button px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-full bg-[#D2D4D1]/90 text-black text-[9px] sm:text-[10px] md:text-[11px] lg:text-[13px] font-medium tracking-wider uppercase transition-all duration-300 hover:bg-black hover:text-white shadow-[0_4px_8px_rgba(0,0,0,0.15)] whitespace-nowrap"
                 >

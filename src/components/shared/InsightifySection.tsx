@@ -54,7 +54,16 @@ export default function InsightifySection() {
               </div>
 
               {/* Button */}
-              <div className="mb-8">
+              <div
+                onClick={() => {
+                  window.open(
+                    "https://insightify-eg.com/",
+                    "_blank",
+                    "noopener,noreferrer",
+                  );
+                }}
+                className="mb-8"
+              >
                 <button className="service-button px-8 py-4 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white text-[11px] sm:text-[13px] font-medium tracking-wider uppercase transition-all duration-300 hover:bg-white hover:text-black shadow-[0_4px_8px_rgba(0,0,0,0.15)]">
                   GO TO WEBSITE
                 </button>
