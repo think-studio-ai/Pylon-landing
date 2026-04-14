@@ -1,4 +1,3 @@
-import React from 'react';
 import DSLogo from "../../assets/DS+ logo.png";
 import DSImage from "../../assets/imagejj.webp";
 

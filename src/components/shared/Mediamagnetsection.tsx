@@ -1,4 +1,3 @@
-import React from 'react';
 import MediaMagnetLogo from "../../assets/mediaMagnet.png";
 import MediaMagnetBottomImage from "../../assets/mediaMagnet1.webp";
 

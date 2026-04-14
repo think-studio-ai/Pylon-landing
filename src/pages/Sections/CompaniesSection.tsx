@@ -1,4 +1,3 @@
-import React from 'react';
 
 // Imports (Logos)
 import Tut from "../../assets/Layer_1.png";

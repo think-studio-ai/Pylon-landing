@@ -1,8 +1,6 @@
-import React from 'react';
 import InsightifyLogo from "../../assets/insightify.png";
 import InsightifyImage1 from "../../assets/insightifyImage1.webp";
 import InsightifyImage2 from "../../assets/insightifyImage2.webp";
-import InsightifyImage3 from "../../assets/insightifyImage3.webp";
 
 export default function InsightifySection() {
   return (

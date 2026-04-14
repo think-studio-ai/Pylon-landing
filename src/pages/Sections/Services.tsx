@@ -1,4 +1,3 @@
-import React from 'react';
 
 export default function Services() {
   const row1 = [
@@ -37,20 +36,20 @@ export default function Services() {
         {/* Row 1 - Scrolling Left */}
         <div className="w-max flex animate-marquee-left">
           <div className="flex items-center">
-            {row1.map((item, i) => renderTextItem(item))}
+            {row1.map((item) => renderTextItem(item))}
           </div>
           <div className="flex items-center">
-            {row1.map((item, i) => renderTextItem(item))}
+            {row1.map((item) => renderTextItem(item))}
           </div>
         </div>
 
         {/* Row 2 - Scrolling Right */}
         <div className="w-max flex animate-marquee-right">
           <div className="flex items-center">
-            {row2.map((item, i) => renderTextItem(item))}
+            {row2.map((item) => renderTextItem(item))}
           </div>
           <div className="flex items-center">
-            {row2.map((item, i) => renderTextItem(item))}
+            {row2.map((item) => renderTextItem(item))}
           </div>
         </div>
 

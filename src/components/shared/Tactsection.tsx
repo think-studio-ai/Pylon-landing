@@ -1,7 +1,5 @@
-import React from 'react';
 import TactLogo from "../../assets/tact.png";
-import TactImage1 from "../../assets/tactImage1.webp";
-import TactImage2 from "../../assets/tactImage2.webp";
+
 
 export default function TactSection() {
   return (

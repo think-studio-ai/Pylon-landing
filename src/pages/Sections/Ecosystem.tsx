@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { ArrowUpRight, Box, Image as ImageIcon, Zap, Layers, BarChart, MessageSquare } from 'lucide-react';
 
 import tutImg from '../../assets/imageee.webp';

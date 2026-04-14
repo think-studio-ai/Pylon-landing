@@ -1,4 +1,3 @@
-import React from 'react';
 import Tut from "../../assets/Layer_1.png";
 import Section1 from "../../assets/image.webp";
 import Section2 from "../../assets/imagel;.webp";

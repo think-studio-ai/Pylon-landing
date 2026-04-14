@@ -1,7 +1,5 @@
-import React from 'react';
 import ThinkLogo from "../../assets/think.png";
-import tk from "../../assets/tk.webp";
-import tk2 from "../../assets/tk2.webp";
+
 
 export default function ThinkSection() {
   return (
