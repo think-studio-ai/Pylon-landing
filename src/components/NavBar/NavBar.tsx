@@ -41,7 +41,7 @@ const Navbar = () => {
               <a
                 key={item.id}
                 href={`#${item.id}`}
-                className="text-[13px] font-medium text-gray-400 hover:text-white transition-colors"
+                className="text-[15px] font-medium text-white-400 hover:text-white transition-colors"
               >
                 {item.name}
               </a>

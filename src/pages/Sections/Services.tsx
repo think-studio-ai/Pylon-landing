@@ -1,3 +1,4 @@
+import SplitText from "../../components/SplitText";
 
 export default function Services() {
   const row1 = [
@@ -26,9 +27,11 @@ export default function Services() {
         <p className="text-[12px] font-bold tracking-widest text-white uppercase mb-4" data-aos="fade-up">
           Capabilities
         </p>
-        <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-300 tracking-tight" data-aos="fade-up" data-aos-delay="100">
-          An Ecosystem of Specialties
-        </h3>
+        <SplitText
+          text="An Ecosystem of Specialties"
+          className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-300 tracking-tight block"
+          delay={50} duration={1.25} tag="h3"
+        />
       </div>
 
       <div className="flex flex-col gap-4 sm:gap-8 relative z-10 w-full overflow-hidden select-none">

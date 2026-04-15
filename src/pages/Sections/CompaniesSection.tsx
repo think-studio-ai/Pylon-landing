@@ -14,6 +14,7 @@ import TactImage1 from "../../assets/tactImage1.webp";
 import tk from "../../assets/tk.webp";
 import InsightifyImage1 from "../../assets/insightifyImage1.webp";
 import MediaMagnetBottomImage from "../../assets/mediaMagnet1.webp";
+import SplitText from "../../components/SplitText";
 
 const companies = [
   {
@@ -86,9 +87,18 @@ export default function CompaniesSection() {
           <p className="text-[11px] sm:text-[13px] font-medium tracking-[0.2em] text-[#D4AF37] uppercase mb-4">
             Our Ecosystem
           </p>
-          <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight">
-            Pinnacles of <span className="text-white/40">Innovation</span>
-          </h3>
+          <div className="flex flex-wrap justify-center md:justify-start gap-x-3 mb-4">
+            <SplitText 
+              text="Pinnacles of" 
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight" 
+              delay={50} duration={1.25} tag="h3" 
+            />
+            <SplitText 
+              text="Innovation" 
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white/40 tracking-tight" 
+              delay={50} duration={1.25} tag="h3" 
+            />
+          </div>
         </div>
 
         {/* 3-Column Modern Glass Bento/Card Grid */}

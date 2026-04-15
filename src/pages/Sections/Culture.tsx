@@ -1,3 +1,4 @@
+import SplitText from "../../components/SplitText";
 
 export default function Culture() {
   return (
@@ -11,9 +12,18 @@ export default function Culture() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           
           <div className="md:col-span-5" data-aos="fade-right" data-aos-duration="1000">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 leading-[1.1] sm:leading-tight">
-              Culture of<br/><span className="text-gray-500">Innovation</span>
-            </h2>
+            <div className="mb-6 flex flex-col items-start">
+              <SplitText 
+                text="Culture of" 
+                className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.1] sm:leading-tight" 
+                delay={50} duration={1.25} tag="h2" 
+              />
+              <SplitText 
+                text="Innovation" 
+                className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-500 leading-[1.1] sm:leading-tight" 
+                delay={50} duration={1.25} tag="h2" 
+              />
+            </div>
             <div className="w-16 h-[2px] bg-[#fff] mb-8"></div>
             <p className="text-[12px] font-bold tracking-[0.2em] text-[#fff] uppercase">
               Excellence • Collaboration • Vision

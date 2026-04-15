@@ -1,5 +1,6 @@
 import  { useState } from 'react';
 import { ArrowUpRight, Box, Image as ImageIcon, Zap, Layers, BarChart, MessageSquare } from 'lucide-react';
+import SplitText from "../../components/SplitText";
 
 import tutImg from '../../assets/imageee.webp';
 import dsImg from '../../assets/imagejj.webp';
@@ -76,9 +77,11 @@ export default function Ecosystem() {
           <p className="text-[12px] font-bold tracking-widest text-white uppercase mb-4">
             Ecosystem
           </p>
-          <h2 className="text-4xl md:text-6xl font-bold text-white tracking-tight mb-4">
-            A Unified Force
-          </h2>
+          <SplitText
+            text="A Unified Force"
+            className="text-4xl md:text-6xl font-bold text-white tracking-tight mb-4 inline-block"
+            delay={50} duration={1.25} tag="h2"
+          />
           <p className="text-[16px] text-gray-400 max-w-2xl mx-auto">
             A synergistic network of specialized entities designed to cover every angle of modern business and culture. Hover to explore.
           </p>

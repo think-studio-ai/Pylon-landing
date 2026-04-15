@@ -1,3 +1,4 @@
+import SplitText from "../../components/SplitText";
 
 export default function Purpose() {
   return (
@@ -18,16 +19,26 @@ export default function Purpose() {
           Our Purpose
         </p>
 
-        <h3 
-          data-aos="fade-up" 
-          data-aos-duration="1200" 
-          data-aos-delay="100"
-          className="text-4xl sm:text-6xl md:text-7xl lg:text-[100px] font-bold text-white leading-[1.1] sm:leading-[1.05] tracking-tighter max-w-5xl mx-auto"
-        >
-          Architects of<br/>
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-100 via-gray-400 to-gray-600">Tomorrow's</span><br/>
-          Experience.
-        </h3>
+        <div className="flex flex-col items-center gap-1">
+          <SplitText
+            text="Architects of"
+            tag="h3"
+            className="text-4xl sm:text-6xl md:text-7xl lg:text-[100px] font-bold text-white leading-[1.1] sm:leading-[1.05] tracking-tighter w-full text-center"
+            delay={50} duration={1.25}
+          />
+          <SplitText
+            text="Tomorrow's"
+            tag="h3"
+            className="text-4xl sm:text-6xl md:text-7xl lg:text-[100px] font-bold text-gray-500 leading-[1.1] sm:leading-[1.05] tracking-tighter w-full text-center"
+            delay={50} duration={1.25}
+          />
+          <SplitText
+            text="Experience."
+            tag="h3"
+            className="text-4xl sm:text-6xl md:text-7xl lg:text-[100px] font-bold text-white leading-[1.1] sm:leading-[1.05] tracking-tighter w-full text-center"
+            delay={50} duration={1.25}
+          />
+        </div>
         
         <p 
           data-aos="fade-up" 

@@ -1,11 +1,11 @@
 import { RouterProvider } from "react-router-dom";
 import { routes } from "./routes/route";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
-
-
+import SplashScreen from "./components/shared/SplashScreen";
 
 function App() {
+  const [splashFinished, setSplashFinished] = useState(false);
 
   useEffect(() => {
     AOS.init({
@@ -17,7 +17,10 @@ function App() {
  
   return (
     <>
-      <RouterProvider router={routes} />
+      {!splashFinished && <SplashScreen onComplete={() => setSplashFinished(true)} />}
+      <div className={!splashFinished ? "h-screen overflow-hidden" : ""}>
+        <RouterProvider router={routes} />
+      </div>
     </>
   );
 }
