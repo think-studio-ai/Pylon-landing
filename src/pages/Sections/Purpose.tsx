@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
 import { MoveRight, Target, Activity, Zap } from "lucide-react";
-import SplitText from "../../components/SplitText";
-
 const pillars = [
   {
     icon: <Target className="w-6 h-6 text-white" />,
@@ -32,45 +30,92 @@ export default function Purpose() {
 
       <div className="max-w-[1400px] w-full mx-auto px-6 sm:px-8 relative z-10 flex flex-col items-center">
         
-        {/* Top Tag */}
-       
-
-        {/* Hero Text */}
-        <div className="flex flex-col items-center gap-2 mb-16 text-center max-w-5xl">
-          <SplitText
-            text="Architects of"
-            tag="h2"
-            className="text-5xl sm:text-7xl md:text-8xl lg:text-[110px] font-bold text-white leading-[1.05] tracking-tighter w-full"
-            delay={30} duration={1}
-          />
-          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 justify-center w-full">
-            <span className="hidden md:block w-16 lg:w-32 h-[2px] bg-gradient-to-r from-transparent via-white/30 to-transparent"></span>
-            <SplitText
-              text="Tomorrow's"
-              tag="h2"
-              className="text-5xl sm:text-7xl md:text-8xl lg:text-[110px] font-bold text-gray-500 leading-[1.05] tracking-tighter italic"
-              delay={30} duration={1}
-            />
-            <span className="hidden md:block w-16 lg:w-32 h-[2px] bg-gradient-to-r from-transparent via-white/30 to-transparent"></span>
+        {/* Innovative Header & Typography */}
+        <div className="w-full mb-32 relative">
+          
+          {/* Top Tag & Pre-heading */}
+          <div className="flex items-center justify-between border-b border-white/10 pb-6 mb-16">
+            <div className="flex items-center gap-4">
+              <div className="w-2 h-2 bg-white rounded-full relative">
+                <div className="absolute inset-0 bg-white rounded-full animate-ping opacity-75"></div>
+              </div>
+              <span className="text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase text-white">Our Purpose</span>
+            </div>
+            <span className="text-xs sm:text-sm text-gray-500 font-mono tracking-widest hidden sm:block">01 // STRATEGY & VISION</span>
           </div>
-          <SplitText
-            text="Experience."
-            tag="h2"
-            className="text-5xl sm:text-7xl md:text-8xl lg:text-[110px] font-bold text-white leading-[1.05] tracking-tighter w-full"
-            delay={30} duration={1}
-          />
+
+          <div className="flex flex-col xl:flex-row gap-16 xl:gap-24 items-start xl:items-end">
+            
+            {/* Massive Typography Left */}
+            <div className="flex-1 w-full">
+              <h2 className="text-[55px] sm:text-[80px] md:text-[100px] lg:text-[130px] font-bold leading-[0.85] tracking-[-0.04em] text-white">
+                <motion.span 
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                  className="block"
+                >
+                  Architects
+                </motion.span>
+                <div className="flex items-center gap-4 sm:gap-8 my-2 sm:my-0">
+                  <motion.div 
+                    initial={{ scaleX: 0 }}
+                    whileInView={{ scaleX: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                    className="w-16 sm:w-24 md:w-32 lg:w-48 h-[2px] bg-white/20 origin-left hidden sm:block"
+                  />
+                  <motion.span 
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+                    className="block text-gray-500 italic font-light"
+                  >
+                    of tomorrow's
+                  </motion.span>
+                </div>
+                <motion.span 
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                  className="block pl-0 sm:pl-[10%]"
+                >
+                  experience.
+                </motion.span>
+              </h2>
+            </div>
+
+            {/* Mission Statement Glass Card Right */}
+            <motion.div 
+              initial={{ opacity: 0, filter: "blur(10px)" }}
+              whileInView={{ opacity: 1, filter: "blur(0px)" }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.4 }}
+              className="w-full xl:w-[450px] shrink-0"
+            >
+              <div className="p-8 sm:p-10 bg-[#0F0F0F] border border-white/5 rounded-[2rem] relative overflow-hidden group hover:border-white/20 transition-all duration-500">
+                {/* Decorative scanning line */}
+                <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-white/50 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />
+                
+                {/* Crosshair Accent */}
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="mb-8 text-white/20 group-hover:text-white transition-colors duration-500 rotate-45 group-hover:rotate-90">
+                  <path d="M12 2L12 22M2 12L22 12" stroke="currentColor" strokeWidth="1.5" />
+                </svg>
+                
+                <p className="text-xl sm:text-2xl text-gray-400 font-light leading-relaxed">
+                  We are driven by a singular vision: to <span className="text-white font-medium">design</span>, <span className="text-white font-medium">build</span>, and <span className="text-white font-medium">operate</span> foundational elements of modern society that elevate human potential and sustainable growth.
+                </p>
+                
+                {/* Subtle corner frame */}
+                <div className="absolute bottom-0 right-0 w-12 h-12 border-b border-r border-white/10 rounded-br-[2rem] group-hover:border-white/30 transition-colors duration-500" />
+              </div>
+            </motion.div>
+            
+          </div>
         </div>
-        
-        {/* Core Mission Statement */}
-        <motion.p 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="text-lg sm:text-xl md:text-2xl text-gray-400 leading-relaxed max-w-3xl text-center font-medium mb-24"
-        >
-          We are driven by a singular mission: to design, build, and operate foundational elements of modern society that elevate human potential and sustainable growth.
-        </motion.p>
 
         {/* Pillars Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl">

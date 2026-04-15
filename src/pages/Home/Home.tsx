@@ -28,7 +28,9 @@ export default function Home() {
       <Suspense fallback={<div className="h-32"></div>}>
         <Purpose />
         {/* Divider Loop */}
-        <div className="w-full overflow-hidden border-b border-white/10 opacity-80 pt-8 pb-12 relative z-20 bg-transparent">
+    
+        <Culture />
+    <div className="w-full overflow-hidden border-b border-white/10 opacity-80 pt-8 pb-12 relative z-20 bg-transparent">
           <CurvedLoop
             marqueeText="PYLON ✦ HOLDING ✦ PYLON ✦ HOLDING ✦ PYLON ✦ HOLDING ✦ "
             speed={2}
@@ -36,9 +38,7 @@ export default function Home() {
             direction="right"
             interactive
           />
-        </div>
-        <Culture />
-
+        </div>  
         <Ecosystem />
         <Services />
         <Footer />
