@@ -1,153 +1,237 @@
 import { motion } from "framer-motion";
-import { MoveRight, Target, Activity, Zap } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import CountUp from "../../components/CountUp";
+
 const pillars = [
   {
-    icon: <Target className="w-6 h-6 text-white" />,
+    number: "01",
     title: "Design",
-    description: "Designing spatial intelligence and forward-planning architectures."
+    label: "Strategy & Architecture",
+    description:
+      "We architect spatial intelligence and forward-planning frameworks — the invisible scaffolding that determines whether ventures endure or collapse under their own ambition.",
   },
   {
-    icon: <Activity className="w-6 h-6 text-white" />,
+    number: "02",
     title: "Build",
-    description: "Engineering resilient infrastructure for sustainable, long-term growth."
+    label: "Engineering & Infrastructure",
+    description:
+      "We engineer resilient infrastructure at the intersection of technology, culture, and capital — systems designed not for the present, but for the demands of what comes next.",
   },
   {
-    icon: <Zap className="w-6 h-6 text-white" />,
+    number: "03",
     title: "Operate",
-    description: "Managing ecosystems that elevate human potential and capabilities."
-  }
+    label: "Management & Ecosystem",
+    description:
+      "We operate high-performance ecosystems with the discipline of institutions and the agility of founders — translating vision into compounding, measurable impact at scale.",
+  },
 ];
+
+
 
 export default function Purpose() {
   return (
-    <section
-      id="purpose"
-      className="relative w-full min-h-screen flex flex-col justify-center py-32 overflow-hidden "
-    >
-      {/* Abstract Background Elements */}
-      <div className="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-[#111] via-transparent to-transparent opacity-50 z-0"></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] md:w-[1000px] h-[600px] md:h-[1000px] bg-white/5 rounded-full blur-[150px] pointer-events-none z-0"></div>
+    <section id="purpose" className="relative w-full overflow-hidden ">
+      {/* ── Subtle top gradient ── */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-white/[0.06]" />
+      <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-white/[0.02] to-transparent pointer-events-none" />
 
-      <div className="max-w-[1400px] w-full mx-auto px-6 sm:px-8 relative z-10 flex flex-col items-center">
-        
-        {/* Innovative Header & Typography */}
-        <div className="w-full mb-32 relative">
-          
-          {/* Top Tag & Pre-heading */}
-          <div className="flex items-center justify-between border-b border-white/10 pb-6 mb-16">
+      {/* ──────────────────────────────────────────────
+          HERO STATEMENT — Full viewport feel
+      ────────────────────────────────────────────── */}
+      <div className="max-w-[1400px] mx-auto px-5 sm:px-8">
+        <div className="pt-20 sm:pt-28 pb-16 sm:pb-24 border-b border-white/[0.06]">
+          {/* Section indicator */}
+          <motion.div
+            initial={{ opacity: 0, y: -8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="flex items-center justify-between mb-14 sm:mb-20"
+          >
             <div className="flex items-center gap-4">
-              <div className="w-2 h-2 bg-white rounded-full relative">
-                <div className="absolute inset-0 bg-white rounded-full animate-ping opacity-75"></div>
+              <div className="relative w-1.5 h-1.5">
+                <div className="absolute inset-0 rounded-full bg-white" />
+                <div className="absolute inset-0 rounded-full bg-white animate-ping opacity-35" />
               </div>
-              <span className="text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase text-white">Our Purpose</span>
+              <span className="text-[10px] font-bold tracking-[0.32em] uppercase text-white/45">
+                Our Purpose
+              </span>
             </div>
-            <span className="text-xs sm:text-sm text-gray-500 font-mono tracking-widest hidden sm:block">01 // STRATEGY & VISION</span>
+            <div className="hidden sm:flex items-center gap-6 text-[10px] font-mono tracking-[0.18em] text-white/15 uppercase">
+              <span>Pylon Holding</span>
+              <span className="w-4 h-px bg-white/10" />
+              <span>§ 01</span>
+            </div>
+          </motion.div>
+
+          {/* ── Two-tone monumental headline ── */}
+          <div className="mb-16 sm:mb-20">
+            {/* Line 1 — solid white */}
+            <div className="overflow-hidden">
+              <motion.h2
+                initial={{ opacity: 0, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
+                className="font-black text-white leading-[0.88] tracking-[-0.05em] uppercase"
+                style={{ fontSize: "clamp(3.2rem, 11.5vw, 11.5rem)" }}
+              >
+                We Build
+              </motion.h2>
+            </div>
+
+            {/* Line 2 — outlined (ghost), shifted right */}
+            <div className="overflow-hidden">
+              <motion.h2
+                initial={{ opacity: 0, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 1.1,
+                  delay: 0.09,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
+                className="font-black leading-[0.88] tracking-[-0.05em] uppercase"
+                style={{
+                  fontSize: "clamp(3.2rem, 11.5vw, 11.5rem)",
+                  paddingLeft: "clamp(0rem, 5vw, 7rem)",
+                  WebkitTextStroke: "1.5px rgba(255,255,255,0.22)",
+                  color: "transparent",
+                }}
+              >
+                Tomorrow.
+              </motion.h2>
+            </div>
           </div>
 
-          <div className="flex flex-col xl:flex-row gap-16 xl:gap-24 items-start xl:items-end">
-            
-            {/* Massive Typography Left */}
-            <div className="flex-1 w-full">
-              <h2 className="text-[55px] sm:text-[80px] md:text-[100px] lg:text-[130px] font-bold leading-[0.85] tracking-[-0.04em] text-white">
-                <motion.span 
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                  className="block"
-                >
-                  Architects
-                </motion.span>
-                <div className="flex items-center gap-4 sm:gap-8 my-2 sm:my-0">
-                  <motion.div 
-                    initial={{ scaleX: 0 }}
-                    whileInView={{ scaleX: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                    className="w-16 sm:w-24 md:w-32 lg:w-48 h-[2px] bg-white/20 origin-left hidden sm:block"
-                  />
-                  <motion.span 
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                    className="block text-gray-500 italic font-light"
-                  >
-                    of tomorrow's
-                  </motion.span>
-                </div>
-                <motion.span 
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                  className="block pl-0 sm:pl-[10%]"
-                >
-                  experience.
-                </motion.span>
-              </h2>
-            </div>
-
-            {/* Mission Statement Glass Card Right */}
-            <motion.div 
-              initial={{ opacity: 0, filter: "blur(10px)" }}
-              whileInView={{ opacity: 1, filter: "blur(0px)" }}
+          {/* ── Mission + Stats — two columns ── */}
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-10 md:gap-16 md:items-end">
+            {/* Mission */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 1, delay: 0.4 }}
-              className="w-full xl:w-[450px] shrink-0"
+              transition={{ duration: 0.9, delay: 0.4 }}
+              className="text-base sm:text-lg text-gray-400 font-light leading-[1.9] max-w-xl"
             >
-              <div className="p-8 sm:p-10 bg-[#0F0F0F] border border-white/5 rounded-[2rem] relative overflow-hidden group hover:border-white/20 transition-all duration-500">
-                {/* Decorative scanning line */}
-                <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-white/50 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />
-                
-                {/* Crosshair Accent */}
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="mb-8 text-white/20 group-hover:text-white transition-colors duration-500 rotate-45 group-hover:rotate-90">
-                  <path d="M12 2L12 22M2 12L22 12" stroke="currentColor" strokeWidth="1.5" />
-                </svg>
-                
-                <p className="text-xl sm:text-2xl text-gray-400 font-light leading-relaxed">
-                  We are driven by a singular vision: to <span className="text-white font-medium">design</span>, <span className="text-white font-medium">build</span>, and <span className="text-white font-medium">operate</span> foundational elements of modern society that elevate human potential and sustainable growth.
-                </p>
-                
-                {/* Subtle corner frame */}
-                <div className="absolute bottom-0 right-0 w-12 h-12 border-b border-r border-white/10 rounded-br-[2rem] group-hover:border-white/30 transition-colors duration-500" />
+              Driven by a singular conviction: that the world's most important
+              institutions are not inherited — they are{" "}
+              <span className="text-white font-medium italic">
+                deliberately designed
+              </span>
+              ,{" "}
+              <span className="text-white font-medium italic">
+                precisely built
+              </span>
+              , and{" "}
+              <span className="text-white font-medium italic">
+                expertly operated
+              </span>{" "}
+              by those who refuse to accept the limits of the present.
+            </motion.p>
+
+            {/* Stats block */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.9, delay: 0.55 }}
+              className="flex gap-8 sm:gap-10 md:flex-col md:gap-5 md:items-end"
+            >
+              {/* Stat 1 — Active Entities */}
+              <div className="flex flex-col items-start md:items-end gap-1">
+                <span className="text-3xl sm:text-4xl font-black   text-white tracking-[-0.04em] leading-none">
+                  <CountUp
+                    from={0}
+                    to={6}
+                    direction="up"
+                    duration={3}
+                    className="count-up-text "
+                  />
+                  <span>+</span>
+                </span>
+                <span className="text-[10px] font-semibold tracking-[0.22em] uppercase text-white/25">
+                  Active Entities
+                </span>
+              </div>
+
+              {/* Stat 2 — Year Founded */}
+              <div className="flex flex-col items-start md:items-end gap-1">
+                <span className="text-3xl sm:text-4xl font-black text-white tracking-[-0.04em] leading-none">
+                  <CountUp
+                    from={1900}
+                    to={2020}
+                    direction="up"
+                    duration={1.5}
+                    separator=""
+                    className="count-up-text"
+                  />
+                </span>
+                <span className="text-[10px] font-semibold tracking-[0.22em] uppercase text-white/25">
+                  Year Founded
+                </span>
               </div>
             </motion.div>
-            
           </div>
         </div>
 
-        {/* Pillars Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl">
+        {/* ──────────────────────────────────────────────
+            PILLARS — Full-width editorial rows
+        ────────────────────────────────────────────── */}
+        <div className="pb-20 sm:pb-32">
           {pillars.map((pillar, idx) => (
             <motion.div
-              key={pillar.title}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.8, delay: 0.3 + idx * 0.15 }}
-              whileHover={{ y: -5 }}
-              className="group relative flex flex-col p-8 md:p-10 rounded-[2rem] bg-[#0A0A0A] border border-white/5 overflow-hidden transition-all duration-500 hover:border-white/20"
+              key={pillar.number}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.6, delay: idx * 0.1 }}
+              className="group relative border-b border-white/[0.06] last:border-b-0"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-              
-              <div className="mb-8 w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:scale-110 group-hover:bg-white group-hover:border-white transition-all duration-500">
-                <div className="group-hover:invert transition-all duration-500">
-                  {pillar.icon}
+              {/* Full-width hover background reveal */}
+              <div className="absolute inset-0 bg-gradient-to-r from-white/[0.025] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+              <div className="relative grid grid-cols-[auto_1fr] sm:grid-cols-[80px_1fr_1fr_auto] gap-x-6 sm:gap-x-10 gap-y-3 sm:gap-y-0 items-start sm:items-center py-8 sm:py-10 md:py-12">
+                {/* Column 1 — Number */}
+                <div className="flex flex-col pt-1">
+                  <span className="text-[11px] font-mono text-white/18 tracking-[0.22em] leading-none">
+                    {pillar.number}
+                  </span>
                 </div>
-              </div>
-              
-              <h4 className="text-2xl font-bold text-white mb-4 tracking-tight">{pillar.title}</h4>
-              <p className="text-gray-500 leading-relaxed font-medium">{pillar.description}</p>
-              
-              <div className="mt-12 flex items-center text-xs font-bold uppercase tracking-widest text-gray-600 group-hover:text-white transition-colors duration-300 mt-auto pt-4">
-                <span>Explore</span>
-                <MoveRight className="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform duration-300" />
+
+                {/* Column 2 — Title */}
+                <div className="sm:col-start-2 sm:col-end-3">
+                  <h3
+                    className="font-black text-white tracking-[-0.035em] leading-none group-hover:text-gray-200 transition-colors duration-300 uppercase"
+                    style={{ fontSize: "clamp(1.6rem, 3.5vw, 3.2rem)" }}
+                  >
+                    {pillar.title}
+                  </h3>
+                  <span className="mt-2 block text-[10px] font-bold tracking-[0.22em] uppercase text-white/20">
+                    {pillar.label}
+                  </span>
+                </div>
+
+                {/* Column 3 — Description (full width on mobile, right col on desktop) */}
+                <motion.p
+                  initial={{ opacity: 0.6 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  className="col-span-2 sm:col-span-1 sm:col-start-3 text-sm sm:text-base text-gray-500 font-light leading-[1.85] group-hover:text-gray-400 transition-colors duration-400 max-w-md"
+                >
+                  {pillar.description}
+                </motion.p>
+
+                {/* Column 4 — Arrow CTA */}
+                <div className="hidden sm:flex col-start-4 items-center justify-end pl-4">
+                  <div className="w-11 h-11 rounded-full border border-white/10 flex items-center justify-center group-hover:border-white/30 group-hover:bg-white/5 transition-all duration-400 shrink-0">
+                    <ArrowRight className="w-4 h-4 text-white/25 group-hover:text-white group-hover:translate-x-0.5 transition-all duration-300" />
+                  </div>
+                </div>
               </div>
             </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   );

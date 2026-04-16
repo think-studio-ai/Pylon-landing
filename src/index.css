@@ -139,11 +139,11 @@ p, span, a, li {
   background: var(--color-primary);
 }
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: #fff;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #fff;
 }
 
 @theme inline {
