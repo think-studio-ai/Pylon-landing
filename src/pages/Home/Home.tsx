@@ -30,7 +30,7 @@ export default function Home() {
         {/* Divider Loop */}
     
         <Culture />
-    <div className="w-full overflow-hidden border-b border-white/10 opacity-80 pt-8 pb-12 relative z-20 bg-transparent">
+    {/* <div className="w-full overflow-hidden border-b border-white/10 opacity-80 pt-8 pb-12 relative z-20 bg-transparent">
           <CurvedLoop
             marqueeText="PYLON ✦ HOLDING ✦ PYLON ✦ HOLDING ✦ PYLON ✦ HOLDING ✦ "
             speed={2}
@@ -38,7 +38,7 @@ export default function Home() {
             direction="right"
             interactive
           />
-        </div>  
+        </div>   */}
         <Ecosystem />
         <Services />
         <Footer />
