@@ -1,5 +1,4 @@
 import Particles from "@/components/Particles";
-import LineWaves from "../../components/LineWaves";
 import SplitText from "../../components/SplitText";
 
 export default function HeroSection() {
