@@ -7,7 +7,7 @@ const Purpose = lazy(() => import('../Sections/Purpose'))
 const Culture = lazy(() => import('../Sections/Culture'))
 const Ecosystem = lazy(() => import('../Sections/Ecosystem'))
 const Services = lazy(() => import('../Sections/Services'))
-const CurvedLoop = lazy(() => import('../../components/CurvedLoop'))
+// const CurvedLoop = lazy(() => import('../../components/CurvedLoop'))
 const Footer = lazy(() => import('../../components/Footer/Footer'))
 const ScrollToTop = lazy(() => import('../../components/shared/ScrollToTop'))
 
