@@ -1,5 +1,5 @@
 import SplitText from "../../components/SplitText";
-import { useRef, useState, useEffect, ReactNode } from "react";
+import { useRef, useState, useEffect, type ReactNode } from "react";
 import { motion, useAnimationFrame, useMotionValue } from "framer-motion";
 
 interface MarqueeRowProps {
@@ -26,7 +26,7 @@ function MarqueeRow({ items, baseVelocity = -50, renderTextItem }: MarqueeRowPro
     return () => window.removeEventListener("resize", measureInfo);
   }, []);
 
-  useAnimationFrame((t, delta) => {
+  useAnimationFrame((_, delta) => {
     if (isDragging || !contentWidth) return;
 
     let moveBy = baseVelocity * (delta / 1000); 
