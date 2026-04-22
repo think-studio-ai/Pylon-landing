@@ -71,7 +71,7 @@ export default function Culture() {
                   <span className="text-gray-500">of Minds</span>
                 </h3>
                 <p className="text-lg sm:text-xl text-gray-400 max-w-2xl leading-relaxed font-medium">
-                  At Pylon Holding, our strength is our people. From civil
+                  At Pylon Collective, our strength is our people. From civil
                   engineers to data scientists, spatial designers to media
                   strategists, we connect diverse brilliance to architect
                   unprecedented solutions.

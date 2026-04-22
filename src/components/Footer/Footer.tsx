@@ -81,7 +81,7 @@ export default function Footer() {
             ))}
           </div>
           <div className="text-[13px] text-gray-500 font-medium">
-            © {new Date().getFullYear()} Pylon Holding. All Rights Reserved.
+            © {new Date().getFullYear()} Pylon Collective. All Rights Reserved.
           </div>
         </div>
       </div>

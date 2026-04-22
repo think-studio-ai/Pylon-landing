@@ -58,7 +58,7 @@ export default function Purpose() {
               </span>
             </div>
             <div className="hidden sm:flex items-center gap-6 text-[10px] font-mono tracking-[0.18em] text-white/15 uppercase">
-              <span>Pylon Holding</span>
+              <span>Pylon Collective</span>
               <span className="w-4 h-px bg-white/10" />
               <span>§ 01</span>
             </div>
