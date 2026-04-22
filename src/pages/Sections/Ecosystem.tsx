@@ -44,7 +44,7 @@ const companies = [
     link: "https://tactinnovations.com/",
   },
   {
-    id: "think",
+    id: "thinkai",
     name: "THINK",
     icon: <Layers size={24} />,
     image: thinkImg,
